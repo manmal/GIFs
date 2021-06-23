@@ -457,8 +457,6 @@
 				60ECD1AB16A1FA6400A0FB7A /* Sources */,
 				60ECD1AC16A1FA6400A0FB7A /* Frameworks */,
 				60ECD1AD16A1FA6400A0FB7A /* Resources */,
-				BBA92901044785550F1AA517 /* [CP] Embed Pods Frameworks */,
-				AF3069D564FC22B97162BC37 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -481,7 +479,7 @@
 				ORGANIZATIONNAME = "Orta Therox";
 				TargetAttributes = {
 					60ECD1AE16A1FA6400A0FB7A = {
-						DevelopmentTeam = GN257VN844;
+						DevelopmentTeam = 6VT84VEY8S;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 1;
@@ -495,6 +493,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 60ECD1A416A1FA6400A0FB7A;
@@ -567,49 +566,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		AF3069D564FC22B97162BC37 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GIFs/Pods-GIFs-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BBA92901044785550F1AA517 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GIFs/Pods-GIFs-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E0BAAE550B59660B988665C8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GIFs-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E59DFC3F18EB20D20014EDA0 /* ShellScript */ = {
@@ -755,11 +727,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E638FB1A41FF1691A2E3CE65 /* Pods-GIFs.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 6VT84VEY8S;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GIFs/GIFs-Prefix.pch";
@@ -771,6 +744,7 @@
 				SDKROOT = macosx;
 				SWIFT_OBJC_BRIDGING_HEADER = "GIFs/GIFs-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -779,7 +753,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CB9954FA3AD9880CEEC2091E /* Pods-GIFs.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -794,6 +768,7 @@
 				PRODUCT_NAME = GIFs;
 				SDKROOT = macosx;
 				SWIFT_OBJC_BRIDGING_HEADER = "GIFs/GIFs-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

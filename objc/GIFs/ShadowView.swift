@@ -9,9 +9,9 @@
 import Cocoa
 
 class ShadowView: NSView {
-    override func drawRect(dirtyRect: NSRect) {
-        super.drawRect(dirtyRect)
+    override func draw(_ dirtyRect: NSRect) {
+        super.draw(dirtyRect)
         NSColor(patternImage: NSImage(named: "shadow")!).set();
-        NSRectFill(dirtyRect);
+        dirtyRect.fill();
     }
 }

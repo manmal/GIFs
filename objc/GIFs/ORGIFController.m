@@ -58,11 +58,11 @@
     } else {
         _currentSource = _searchController;
         [_searchController setQuery:string];
-        [_searchController setAPIKey:[GifsKeys new].giphyAPIKey];
+        [_searchController setAPIKey:[GIFsKeys new].giphyAPIKey];
         showGiphyLogo = YES;
     }
     
-    [self.windowDecorationController showGiphyLogo:showGiphyLogo];
+    [self.windowDecorationController showGiphyLogoWithShow:showGiphyLogo];
     [self getNextGIFs];
     [self.collectionView reloadData];
     self.sectionTitle.stringValue = string;

@@ -19,7 +19,7 @@ class AboutController : NSObject {
     @IBOutlet weak var titleBackgroundView: NSView!
     
     override func awakeFromNib() {
-        titleBackgroundView.layer!.backgroundColor = NSColor(calibratedWhite: 0, alpha: 0.3).CGColor
+        titleBackgroundView.layer!.backgroundColor = NSColor(calibratedWhite: 0, alpha: 0.3).cgColor
     }
     
     @IBAction func openModal(sender: AnyObject) {
@@ -36,24 +36,24 @@ class AboutController : NSObject {
     }
     
     @IBAction func openGithub(sender: AnyObject) {
-        let workspace = NSWorkspace.sharedWorkspace()
-        workspace.openURL(NSURL(string: "http://github.com/orta")!);
+        let workspace = NSWorkspace.shared
+        workspace.open(NSURL(string: "http://github.com/orta")! as URL);
     }
     
     @IBAction func openTwitter(sender: AnyObject) {
-        let workspace = NSWorkspace.sharedWorkspace()
-        if let tweetbot = workspace.fullPathForApplication("Tweetbot") {
-            workspace.openURL(NSURL(string: "tweetbot:///user_profile/orta")!);
+        let workspace = NSWorkspace.shared
+        if workspace.fullPath(forApplication: "Tweetbot") != nil {
+            workspace.open(NSURL(string: "tweetbot:///user_profile/orta")! as URL);
             
         } else {
-            workspace.openURL(NSURL(string: "http://twitter.com/orta")!);
+            workspace.open(NSURL(string: "http://twitter.com/orta")! as URL);
         }
         
     }
     
     @IBAction func openMySite(sender: AnyObject) {
-        let workspace = NSWorkspace.sharedWorkspace()
-        workspace.openURL(NSURL(string: "http://orta.io")!);
+        let workspace = NSWorkspace.shared
+        workspace.open(NSURL(string: "http://orta.io")! as URL);
 
     }
 }

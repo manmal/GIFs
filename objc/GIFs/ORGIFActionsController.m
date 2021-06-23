@@ -27,7 +27,7 @@
 
 + (void)tweet:(NSString *)tweet
 {
-    GifsKeys *keys = [[GifsKeys alloc] init];
+    GIFsKeys *keys = [[GIFsKeys alloc] init];
     STTwitterAPI *twitter = [STTwitterAPI twitterAPIWithOAuthConsumerKey: [keys randoTwitterBotConsumerKey]
                                                           consumerSecret: [keys randoTwitterBotConsumerSecret]
                                                               oauthToken: [keys randoTwitterBotOAuthToken]

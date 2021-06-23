@@ -10,10 +10,10 @@ import Cocoa
 
 class ORTintedView: NSView {
     
-    override func drawRect(dirtyRect: NSRect) {
-        super.drawRect(dirtyRect)
+    override func draw(_ dirtyRect: NSRect) {
+        super.draw(dirtyRect)
         NSColor(calibratedRed: 0.162, green: 0.137, blue: 0.160, alpha: 0.75).set();
-        NSRectFill(dirtyRect);
+        dirtyRect.fill()
     }
     
 }

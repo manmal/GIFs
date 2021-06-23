@@ -19,7 +19,7 @@ PODS:
   - AFNetworking/Serialization (2.6.3)
   - GIFKit (0.1.0):
     - AFNetworking (~> 2.3)
-  - Keys (1.0.0)
+  - Keys (1.0.1)
   - StandardPaths (1.5.6)
   - STTwitter (0.2.5)
 
@@ -28,6 +28,12 @@ DEPENDENCIES:
   - Keys (from `Pods/CocoaPodsKeys`)
   - StandardPaths (~> 1.5.4)
   - STTwitter (~> 0.2)
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - StandardPaths
+    - STTwitter
 
 EXTERNAL SOURCES:
   GIFKit:
@@ -43,10 +49,10 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   GIFKit: 2588e9225ea99351a3525b2205605ab1b9307866
-  Keys: 9c35bf00f612ee1d48556f4a4b9b4551e224e90f
+  Keys: a576f4c9c1c641ca913a959a9c62ed3f215a8de9
   StandardPaths: 0c11c9256a68dd2339d4d2de647a5bd819648c46
   STTwitter: 5c157e8dcb4f0e4cf5b4374393021b7d7b7fd497
 
 PODFILE CHECKSUM: ef1686754bd76bb3917f80e90a403ab3227659e0
 
-COCOAPODS: 1.1.0.rc.2
+COCOAPODS: 1.10.1
